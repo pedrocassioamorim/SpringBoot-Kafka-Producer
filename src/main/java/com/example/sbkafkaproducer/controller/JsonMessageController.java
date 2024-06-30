@@ -20,7 +20,7 @@ public class JsonMessageController {
 
     @PostMapping("/publish")
     public ResponseEntity<String> publishJSON (@RequestBody  User user){
-        kafkaProducer.sentdMessege(user);
+        kafkaProducer.sendMessege(user);
         return ResponseEntity.ok("JSON Message send to Kafka topic");
     }
 }
